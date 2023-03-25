@@ -1,7 +1,7 @@
 // Inserting default data to the database.
 
 import { products } from "./constants/data.js";
-import Product from "./schema/product-schema.js";
+import Product from "./model/productSchema.js";
 
 const DefaultData = async () => {
   try {
