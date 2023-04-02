@@ -9,10 +9,11 @@ const productSchema = new mongoose.Schema({
   name: String,
   stock: Boolean,
   price: Object,
-  allergenAlert: String,
+  ingredients: String,
   category: String,
   url: String,
   quantity: Number,
+  orders: Object,
 });
 
 // Creating collection in "database1"
