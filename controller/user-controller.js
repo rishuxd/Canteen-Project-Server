@@ -32,3 +32,14 @@ export const userLogin = async (request, response) => {
     response.status(500).json("Error", error.message);
   }
 };
+
+export const getUserByEmail = async (request, response) => {
+  try {
+    const email = request.params.email;
+    const user = await User.findOne({ email: email });
+
+    response.status(200).json(user);
+  } catch (error) {
+    response.status(500).json({ message: error.message });
+  }
+};
